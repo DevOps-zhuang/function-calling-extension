@@ -47,6 +47,18 @@ ngrok http http://localhost:8080
 go run .
 ```
 
+## Run in Docker mode
+1. Build Docker Image
+docker build . -t copilot/extensions/function-calling-extension
+
+```
+2. run in Docker mode, by init the environment variables.
+docker run -e PORT=9090 -e CLIENT_ID=custom_client_id -e CLIENT_SECRET=custom_client_secret -e FQDN=https://custom.example.com copilot/extensions/function-calling-extension
+```
+
+
+```
+
 ## Accessing the Agent in Chat:
 
 1. In the `Copilot` tab of your Application settings (`https://github.com/settings/apps/<app_name>/agent`)
